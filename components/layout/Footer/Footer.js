@@ -9,7 +9,6 @@ import {
   FooterSocialNav
 } from "./Footer.styles";
 
-
 const navigation = [
   {
     href: "/",
@@ -31,15 +30,18 @@ const navigation = [
 
 const socialNav = [
   {
-    href: "https://www.instagram.com/",
+    href: "https://instagram.com",
+    title: "instagram",
     icon: <FaInstagram tw="h-6 w-6" />
   },
   {
-    href: "https://www.facebook.com/",
+    href: "https://facebook.com",
+    title: "facebook",
     icon: <FaFacebook tw="h-6 w-6" />
   },
   {
-    href: "https://www.twitter.com/",
+    href: "https://twitter.com",
+    title: "twitter",
     icon: <FaTwitter tw="h-6 w-6" />
   }
 ];

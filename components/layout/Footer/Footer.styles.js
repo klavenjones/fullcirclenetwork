@@ -1,14 +1,11 @@
 import Link from "next/link";
-import tw, { styled } from "twin.macro";
-
-
-
-
+import tw, { css } from "twin.macro";
 
 export const FooterContainer = tw.footer`py-20 text-white bg-gray-800`;
 export const FooterInnerContainer = tw.div`container px-4 mx-auto text-center`;
 export const LowerFooterContainer = tw.div`container px-4 py-4 mx-auto`;
-export const SocialLink = styled.a`
+
+export const socialLinks = css`
   ${tw`inline-block cursor-pointer text-gray-50 hover:text-red-700 transition-all duration-300`}
   &:nth-child(2) {
     margin: 0 2.5rem;
@@ -19,7 +16,7 @@ export const FooterAuthor = ({ href, children }) => (
   <LowerFooterContainer>
     <p tw="text-center text-base text-white">
       Website by {"  "}
-      <Link href={href}>
+      <Link href={href} passHref={true}>
         <a tw="text-white transition-all duration-200 hover:text-red-500">
           {children}
         </a>
@@ -37,15 +34,17 @@ export const FooterCopyRight = ({ children }) => (
 export const FooterNav = ({ navigation }) => (
   <ul tw="my-6 flex flex-wrap items-center justify-center space-x-10">
     {navigation.map((item) => (
-      <FooterNavItem href={item.href} title={item.title} />
+      <FooterNavItem key={item.title} href={item.href} title={item.title} />
     ))}
   </ul>
 );
 
 export const FooterSocialNav = ({ navigation }) => (
-  <div tw="mb-6">
+  <div tw="mb-4">
     {navigation.map((item) => (
-      <FooterSocialItem href={item.href}>{item.icon}</FooterSocialItem>
+      <FooterSocialItem key={item.title} href={item.href}>
+        {item.icon}
+      </FooterSocialItem>
     ))}
   </div>
 );
@@ -61,7 +60,9 @@ export const FooterNavItem = ({ href, title }) => (
 );
 
 export const FooterSocialItem = ({ href, children }) => (
-  <Link href={href}>
-    <SocialLink>{children}</SocialLink>
-  </Link>
+  <>
+    <Link href={href} passHref={true}>
+      <a css={socialLinks}>{children}</a>
+    </Link>
+  </>
 );

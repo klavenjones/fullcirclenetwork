@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS=--max_old_space_size=4096 next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -13,7 +13,8 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-palette": "^1.0.2"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.3.0",
