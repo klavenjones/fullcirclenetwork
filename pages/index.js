@@ -1,6 +1,6 @@
 import tw from "twin.macro";
 import { NavBar, Footer } from "@components/layout";
-import { Featured, Header } from "@components/views";
+import { Brands, Featured, Header } from "@components/views";
 
 export default function Home() {
   return (
