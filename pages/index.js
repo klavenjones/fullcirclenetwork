@@ -1,4 +1,4 @@
-import tw from "twin.macro";
+ import tw from "twin.macro";
 import { NavBar, Footer } from "@components/layout";
 import { Featured, Header, Description, Brands } from "@components/views";
 
