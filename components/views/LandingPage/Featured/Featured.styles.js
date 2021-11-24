@@ -1,4 +1,6 @@
+import Link from "next/link";
 import tw, { css } from "twin.macro";
+
 import { usePalette } from "react-palette";
 
 const reverseImage = css`
@@ -17,9 +19,19 @@ export const FeaturedImage = ({ image, title, secondFeature }) => (
   </div>
 );
 
+export const ShowMore = () => (
+  <div tw="w-full bg-red-600 py-20 flex justify-center items-center">
+    <Link href="https://klavenjones.com" passHref={true}>
+      <a tw="inline-block text-white hover:text-gray-300 transition duration-200 text-xl cursor-pointer md:text-2xl lg:text-4xl">
+        Show More
+      </a>
+    </Link>
+  </div>
+);
+
 export const FeaturedCaption = ({ image, brand, caption, secondFeature }) => {
   const { data, loading, error } = usePalette(image);
-  
+
   return (
     <>
       <div
@@ -60,6 +72,7 @@ export const FeaturedSection = ({ featured }) => {
           </FeaturedContainer>
         </>
       ))}
+      <ShowMore />
     </>
   );
 };

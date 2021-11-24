@@ -6,7 +6,7 @@ export const FooterInnerContainer = tw.div`container px-4 mx-auto text-center`;
 export const LowerFooterContainer = tw.div`container px-4 py-4 mx-auto`;
 
 export const socialLinks = css`
-  ${tw`inline-block cursor-pointer text-gray-50 hover:text-red-700 transition-all duration-300`}
+  ${tw`inline-block cursor-pointer text-gray-50 hover:text-red-600 transition-all duration-300`}
   &:nth-child(2) {
     margin: 0 2.5rem;
   }
