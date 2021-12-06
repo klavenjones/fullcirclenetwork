@@ -39,21 +39,22 @@ export const FeaturedOverlay = ({ image, title }) => {
         opacity: 1
       }}
     >
-      <a
-        href="#"
-        css={[
-          tw`absolute inset-0 bg-gray-800 opacity-90 w-full h-full md:h-auto flex flex-col justify-center items-center md:items-start text-white pb-4 px-6 md:px-8 lg:px-10 z-10`,
-          css`
-            background-image: linear-gradient(
-              to left,
-              ${data.muted},
-              transparent
-            );
-          `
-        ]}
-      >
-        <h1 tw="text-gray-200 uppercase text-5xl opacity-100">{title}</h1>
-      </a>
+      <Link href="#">
+        <a
+          css={[
+            tw`absolute inset-0 bg-gray-800 opacity-90 w-full h-full md:h-auto flex flex-col justify-center items-center md:items-start text-white pb-4 px-6 md:px-8 lg:px-10 z-10 cursor-pointer`,
+            css`
+              background-image: linear-gradient(
+                to left,
+                ${data.vibrant},
+                ${data.darkVibrant}
+              );
+            `
+          ]}
+        >
+          <h1 tw="text-gray-200 uppercase text-5xl opacity-100">{title}</h1>
+        </a>
+      </Link>
       <img
         tw="absolute inset-0 w-full h-full object-center object-cover object-center bg-top"
         src={image}
@@ -65,7 +66,7 @@ export const FeaturedOverlay = ({ image, title }) => {
 
 export const ShowMore = () => (
   <div tw="w-full bg-red-600 py-20 flex justify-center items-center">
-    <Link href="https://klavenjones.com" passHref={true}>
+    <Link href="/brands">
       <a tw="inline-block text-white hover:text-gray-300 transition duration-200 text-xl cursor-pointer md:text-2xl lg:text-4xl">
         Show More
       </a>
@@ -82,7 +83,7 @@ export const FeaturedCaption = ({ image, brand, caption, secondFeature }) => {
         css={[
           tw`bg-gray-800 h-128 md:h-auto flex flex-col justify-end text-white pb-4 px-6 md:px-8 lg:px-10`,
           css`
-            background: ${data && data.muted};
+            background: ${data && data.vibrant};
           `,
           secondFeature && reverseCaption
         ]}

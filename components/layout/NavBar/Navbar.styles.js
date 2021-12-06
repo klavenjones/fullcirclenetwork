@@ -14,8 +14,14 @@ export const Navbar = (props) => (
 );
 
 export const NavContainer = tw.div`flex justify-between items-center`;
-export const NavLogo = tw.a`text-red-500 font-extrabold text-xl uppercase tracking-widest leading-none`;
 
+export const NavLogo = ({ children }) => (
+  <Link href="/">
+    <a tw="text-red-500 font-extrabold text-xl uppercase tracking-widest leading-none cursor-pointer">
+      {children}
+    </a>
+  </Link>
+);
 export const SocialMedia = () => (
   <div tw="flex space-x-4">
     <Link href="https://facebook.com">
@@ -55,7 +61,7 @@ export const NavOverlay = (props) => (
 
 export const Nav = (props) => (
   <motion.ul
-    tw="w-full px-10 text-left mb-12 space-y-8 relative"
+    tw="w-full px-10 text-left mb-20 space-y-8 relative"
     variants={props.navVariants}
     {...props}
   >
