@@ -34,6 +34,7 @@ export const FeaturedOverlay = ({ image, title }) => {
       initial={{
         opacity: 0
       }}
+      transition={{ ease: "easeIn", duration: 0.2 }}
       whileHover={{
         opacity: 1
       }}
@@ -44,7 +45,7 @@ export const FeaturedOverlay = ({ image, title }) => {
           tw`absolute inset-0 bg-gray-800 opacity-90 w-full h-full md:h-auto flex flex-col justify-center items-center md:items-start text-white pb-4 px-6 md:px-8 lg:px-10 z-10`,
           css`
             background-image: linear-gradient(
-              to right,
+              to left,
               ${data.muted},
               transparent
             );
@@ -54,7 +55,7 @@ export const FeaturedOverlay = ({ image, title }) => {
         <h1 tw="text-gray-200 uppercase text-5xl opacity-100">{title}</h1>
       </a>
       <img
-        tw="absolute inset-0 object-cover object-center bg-top w-full h-full"
+        tw="absolute inset-0 w-full h-full object-center object-cover object-center bg-top"
         src={image}
         alt={title}
       />
@@ -73,7 +74,7 @@ export const ShowMore = () => (
 );
 
 export const FeaturedCaption = ({ image, brand, caption, secondFeature }) => {
-  const { data, loading, error } = usePalette(image);
+  const { data } = usePalette(image);
 
   return (
     <>
