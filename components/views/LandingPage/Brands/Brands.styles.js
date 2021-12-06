@@ -10,9 +10,9 @@ export const LatestBrands = () => (
 );
 
 export const LatestContainer = ({ children }) => (
-  <section class="pb-20 pt-8 mx-auto max-w-6xl">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3">{children}</div>
+  <section tw="pb-20 pt-8 mx-auto max-w-6xl">
+    <div tw="container mx-auto">
+      <div tw="grid grid-cols-1 gap-2 lg:grid-cols-3">{children}</div>
     </div>
   </section>
 );

@@ -2,11 +2,11 @@ import tw from "twin.macro";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const ContactContainer = ({ children }) => (
-  <section class="relative py-20">{children}</section>
+  <section tw="relative py-20">{children}</section>
 );
 
 const ContactImage = ({ src }) => (
-  <div class="w-full lg:absolute lg:top-0 lg:mt-20 lg:left-0">
+  <div tw="w-full lg:absolute lg:top-0 lg:mt-20 lg:left-0">
     <img
       tw="h-112 w-full lg:w-3/5 lg:pr-8 object-cover lg:rounded-r-xl"
       src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hcmtldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
@@ -17,21 +17,21 @@ const ContactImage = ({ src }) => (
 
 const ContactInfo = () => (
   <div tw="container px-4 mx-auto mb-10 lg:mb-0">
-    <div class="w-full lg:w-1/2 ml-auto">
-      <div class="flex flex-wrap lg:h-112 sm:max-w-md lg:ml-auto">
+    <div tw="w-full lg:w-1/2 ml-auto">
+      <div tw="flex flex-wrap lg:h-112 sm:max-w-md lg:ml-auto">
         <div>
-          <h2 class="mb-4 text-5xl font-bold">Get questions?</h2>
-          <p class="text-gray-500 leading-loose">
+          <h2 tw="mb-4 text-5xl font-bold">Get questions?</h2>
+          <p tw="text-gray-500 leading-loose">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan
             aliquet orci.
           </p>
         </div>
 
-        <div class="mt-5 lg:mt-auto w-full flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 mb-12 lg:mb-0">
+        <div tw="mt-5 lg:mt-auto w-full flex flex-wrap -mx-4">
+          <div tw="w-full md:w-1/2 px-4 mb-12 lg:mb-0">
             {/* <svg
-              class="mb-2"
+              tw="mb-2"
               width="48"
               height="48"
               viewbox="0 0 48 48"
@@ -51,9 +51,9 @@ const ContactInfo = () => (
               <FaTwitter tw="h-5 w-5" />
             </div>
           </div>
-          <div class="w-full md:w-1/2 px-4">
+          <div tw="w-full md:w-1/2 px-4">
             <svg
-              class="mb-2"
+              tw="mb-2"
               width="48"
               height="48"
               viewbox="0 0 48 48"
@@ -66,10 +66,8 @@ const ContactInfo = () => (
               ></path>
               <circle cx="24" cy="24" r="23.5" stroke="#C2C9D2"></circle>
             </svg>
-            <p class="text-2xl font-semibold text-gray-800">Contact Us</p>
-            <p class="text-lg text-gray-500 leading-loose">
-              hello@wireframes.org
-            </p>
+            <p tw="text-2xl font-semibold text-gray-800">Contact Us</p>
+            <p tw="text-lg text-gray-500 leading-loose">hello@wireframes.org</p>
           </div>
         </div>
       </div>
@@ -78,37 +76,37 @@ const ContactInfo = () => (
 );
 
 export const ContactOG = () => (
-  <section class="py-20">
-    <div class="px-10 mx-auto mb-20">
-      {/* <div class="grid grid-cols-1 gap-6 md:grid-cols-1"> */}
-      {/* <div class="w-full">
+  <section tw="py-20">
+    <div tw="px-10 mx-auto mb-20">
+      {/* <div tw="grid grid-cols-1 gap-6 md:grid-cols-1"> */}
+      {/* <div tw="w-full">
           <img
             tw="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hcmtldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
             alt=""
           />
         </div> */}
-      <div class="grid gap-10 grid-cols-1 justify-items-center border-red-300">
-        <div class="w-full px-4 mb-8 lg:mb-0">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl text-center lg:text-5xl font-bold leading-relaxed lg:leading-relaxed">
+      <div tw="grid gap-10 grid-cols-1 justify-items-center border-red-300">
+        <div tw="w-full px-4 mb-8 lg:mb-0">
+          <div tw="max-w-4xl mx-auto">
+            <h2 tw="text-4xl text-center lg:text-5xl font-bold leading-relaxed lg:leading-relaxed">
               Know of any brands you'd like us to highlight? Feel free to hit us
               up!
             </h2>
           </div>
         </div>
 
-        <div class="max-w-lg grid grid-cols-1 gap-1 justify-items-center text-centerß">
+        <div tw="max-w-lg grid grid-cols-1 gap-1 justify-items-center text-center">
           <div>
-            {/* <h3 class="mb-4 text-3xl font-bold">Contacts</h3>
-            <p class="text-xl text-gray-500">hello@fullcirclenetwork.com</p> */}
-            <button class="bg-red-500 text-lg text-white text-bold p-6 rounded-full">
+            {/* <h3 tw="mb-4 text-3xl font-bold">Contacts</h3>
+            <p tw="text-xl text-gray-500">hello@fullcirclenetwork.com</p> */}
+            <button tw="bg-red-500 text-lg text-white font-bold p-6 rounded-full">
               hello@fullcirclenetwork.com
             </button>
           </div>
-          <div class="mt-20">
-            <h3 class="mb-8 text-center text-2xl font-bold">Follow Us</h3>
-            <div class="flex justify-between w-56 mb-8 text-gray-800">
+          <div tw="mt-20">
+            <h3 tw="mb-8 text-center text-2xl font-bold">Follow Us</h3>
+            <div tw="flex justify-between w-56 mb-8 text-gray-800">
               <FaInstagram tw="h-10 w-10 mr-6" />
               <FaFacebookF tw="h-10 w-10 mr-6" />
               <FaTwitter tw="h-10 w-10" />

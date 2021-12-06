@@ -1,7 +1,7 @@
 import tw, { css } from "twin.macro";
 
 const reversedOrder = css`
-  ${tw`order-last lg:order-first`}
+  ${tw`order-first lg:order-first`}
 `;
 
 const standardOrder = css`
@@ -13,8 +13,8 @@ const captionRight = css`
 `;
 
 export const BrandListContainer = ({ children }) => (
-  <section class="py-20">
-    <div class="container px-4 mx-auto">{children}</div>
+  <section tw="py-20">
+    <div tw="container px-4 mx-auto">{children}</div>
   </section>
 );
 
@@ -54,7 +54,7 @@ export const BrandListItem = ({ brand, reversed }) => (
     >
       <div tw="h-96 w-full">
         <img
-          class="w-full h-full object-cover rounded-lg"
+          tw="w-full h-full object-cover rounded-lg"
           src={brand.image}
           alt=""
         />

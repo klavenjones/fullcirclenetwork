@@ -2,7 +2,7 @@ import tw from "twin.macro";
 
 export const HeaderSection = ({ children }) => (
   <section tw="py-20">
-    <div className="container px-4 ml-auto">{children}</div>
+    <div tw="container px-4 ml-auto">{children}</div>
   </section>
 );
 

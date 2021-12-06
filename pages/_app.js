@@ -7,12 +7,13 @@ const customStyles = css`
 
   body {
     font-family: "Karla", sans-serif;
+    padding-top: 6rem;
   }
 `;
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div tw="relative">
       <BaseStyles />
       <Global styles={customStyles} />
       <Component {...pageProps} />

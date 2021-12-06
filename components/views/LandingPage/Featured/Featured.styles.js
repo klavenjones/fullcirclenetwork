@@ -1,6 +1,6 @@
 import Link from "next/link";
 import tw, { css } from "twin.macro";
-
+import { motion } from "framer-motion";
 import { usePalette } from "react-palette";
 
 const reverseImage = css`
@@ -11,13 +11,56 @@ const reverseCaption = css`
   ${tw`order-2 md:order-1`}
 `;
 
-export const FeaturedContainer = tw.div`grid grid-cols-1 md:grid-cols-2`;
+export const FeaturedContainer = tw.div`grid grid-cols-1 md:grid-cols-2 relative`;
 
 export const FeaturedImage = ({ image, title, secondFeature }) => (
-  <div css={[tw`bg-black h-96 md:max-h-100`, secondFeature && reverseImage]}>
-    <img tw="object-cover w-full h-full" src={image} alt={title} />
+  <div css={[tw`bg-black h-128 md:max-h-128`, secondFeature && reverseImage]}>
+    <img
+      tw="object-cover object-center bg-top w-full h-full"
+      src={image}
+      alt={title}
+    />
   </div>
 );
+
+export const FeaturedOverlay = ({ image, title }) => {
+  const { data } = usePalette(image);
+
+  return (
+    <motion.div
+      css={[
+        tw`relative absolute inset-0 bg-gray-800 w-full h-full md:h-auto flex flex-col justify-center text-white`
+      ]}
+      initial={{
+        opacity: 0
+      }}
+      whileHover={{
+        opacity: 1
+      }}
+    >
+      <a
+        href="#"
+        css={[
+          tw`absolute inset-0 bg-gray-800 opacity-90 w-full h-full md:h-auto flex flex-col justify-center items-center md:items-start text-white pb-4 px-6 md:px-8 lg:px-10 z-10`,
+          css`
+            background-image: linear-gradient(
+              to right,
+              ${data.muted},
+              transparent
+            );
+          `
+        ]}
+      >
+        <h1 tw="text-gray-200 uppercase text-5xl opacity-100">{title}</h1>
+      </a>
+      <img
+        tw="absolute inset-0 object-cover object-center bg-top w-full h-full"
+        src={image}
+        alt={title}
+      />
+    </motion.div>
+  );
+};
 
 export const ShowMore = () => (
   <div tw="w-full bg-red-600 py-20 flex justify-center items-center">
@@ -36,7 +79,7 @@ export const FeaturedCaption = ({ image, brand, caption, secondFeature }) => {
     <>
       <div
         css={[
-          tw`bg-gray-800 h-96 md:h-auto flex flex-col justify-end text-white pb-4 px-6 md:px-8 lg:px-10`,
+          tw`bg-gray-800 h-128 md:h-auto flex flex-col justify-end text-white pb-4 px-6 md:px-8 lg:px-10`,
           css`
             background: ${data && data.muted};
           `,
@@ -69,6 +112,7 @@ export const FeaturedSection = ({ featured }) => {
               image={feature.image}
               secondFeature={(index + 1) % 2 === 0}
             />
+            <FeaturedOverlay image={feature.image} title={feature.brand} />
           </FeaturedContainer>
         </>
       ))}

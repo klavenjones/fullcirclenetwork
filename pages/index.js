@@ -1,16 +1,20 @@
- import tw from "twin.macro";
+import { motion } from "framer-motion";
 import { NavBar, Footer } from "@components/layout";
 import { Featured, Header, Description, Brands } from "@components/views";
 
 export default function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <NavBar />
       <Header />
       <Featured />
       <Description />
       <Brands />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
