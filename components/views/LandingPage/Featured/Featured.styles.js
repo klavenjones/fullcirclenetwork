@@ -16,7 +16,7 @@ export const FeaturedContainer = tw.div`grid grid-cols-1 md:grid-cols-2 relative
 export const FeaturedImage = ({ image, title, secondFeature }) => (
   <div css={[tw`bg-black h-128 md:max-h-128`, secondFeature && reverseImage]}>
     <img
-      tw="object-cover object-center bg-top w-full h-full"
+      tw="object-cover md:object-center bg-top w-full h-full"
       src={image}
       alt={title}
     />
@@ -55,11 +55,13 @@ export const FeaturedOverlay = ({ image, title }) => {
             `
           ]}
         >
-          <h1 tw="text-gray-200 uppercase text-5xl opacity-100">{title}</h1>
+          <h1 tw="text-gray-200 uppercase text-3xl sm:text-4xl md:text-5xl opacity-100">
+            {title}
+          </h1>
         </a>
       </Link>
       <img
-        tw="absolute inset-0 w-full h-full object-center object-cover object-center bg-top"
+        tw="absolute inset-0 w-full h-full object-right object-cover object-center bg-top"
         src={image}
         alt={title}
       />
