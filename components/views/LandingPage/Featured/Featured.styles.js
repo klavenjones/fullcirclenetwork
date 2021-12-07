@@ -38,6 +38,9 @@ export const FeaturedOverlay = ({ image, title }) => {
       whileHover={{
         opacity: 1
       }}
+      onTap={{
+        opacity: 1
+      }}
     >
       <Link href="/brand">
         <a
