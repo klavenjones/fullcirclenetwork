@@ -38,7 +38,7 @@ export const FeaturedOverlay = ({ image, title }) => {
       whileHover={{
         opacity: 1
       }}
-      onTap={{
+      whileTap={{
         opacity: 1
       }}
     >
