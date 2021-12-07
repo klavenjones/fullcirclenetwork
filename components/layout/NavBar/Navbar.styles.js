@@ -88,7 +88,7 @@ export const NavItems = (props) => (
 );
 
 export const NavFooter = (props) => (
-  <div tw="border-t-4 py-10 px-10 w-full flex items-center justify-between text-gray-500">
+  <div tw="border-t-4 py-10 px-10 w-full flex flex-col space-y-6 md:flex-row md:space-x-0 md:items-center md:justify-between text-gray-500">
     <Email />
     <SocialMedia />
   </div>
