@@ -25,17 +25,17 @@ export const NavLogo = ({ children }) => (
 export const SocialMedia = () => (
   <div tw="flex space-x-4">
     <Link href="https://facebook.com">
-      <a>
+      <a target="_blank">
         <FaFacebook tw="h-6 w-6" />
       </a>
     </Link>
     <Link href="https://instagram.com">
-      <a>
+      <a target="_blank">
         <FaInstagram tw="h-6 w-6" />
       </a>
     </Link>
     <Link href="https://twitter.com">
-      <a>
+      <a target="_blank">
         <FaTwitter tw="h-6 w-6" />
       </a>
     </Link>

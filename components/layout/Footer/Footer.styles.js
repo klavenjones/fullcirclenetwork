@@ -17,7 +17,10 @@ export const FooterAuthor = ({ href, children }) => (
     <p tw="text-center text-base text-white">
       Website by {"  "}
       <Link href={href} passHref={true}>
-        <a tw="text-white transition-all duration-200 hover:text-red-500">
+        <a
+          target="_blank"
+          tw="text-white transition-all duration-200 hover:text-red-500"
+        >
           {children}
         </a>
       </Link>
@@ -62,7 +65,9 @@ export const FooterNavItem = ({ href, title }) => (
 export const FooterSocialItem = ({ href, children }) => (
   <>
     <Link href={href} passHref={true}>
-      <a css={socialLinks}>{children}</a>
+      <a target="_blank" css={socialLinks}>
+        {children}
+      </a>
     </Link>
   </>
 );

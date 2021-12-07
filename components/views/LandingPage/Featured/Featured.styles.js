@@ -39,7 +39,7 @@ export const FeaturedOverlay = ({ image, title }) => {
         opacity: 1
       }}
     >
-      <Link href="#">
+      <Link href="/brand">
         <a
           css={[
             tw`absolute inset-0 bg-gray-800 opacity-90 w-full h-full md:h-auto flex flex-col justify-center items-center md:items-start text-white pb-4 px-6 md:px-8 lg:px-10 z-10 cursor-pointer`,
